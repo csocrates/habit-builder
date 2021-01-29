@@ -1,7 +1,7 @@
 import React from 'react';
 
 class AddHabit extends React.Component {
-  state = { habit: '', frequency: '' };
+  state = { habit: '', frequency: 0 };
 
   handleInput = ({ target: { value, id } }) => {
     this.setState((currentState) => {
@@ -13,7 +13,7 @@ class AddHabit extends React.Component {
     event.preventDefault();
     const newHabit = { ...this.state };
     this.props.addNewHabit(newHabit);
-    this.setState({ habit: '', frequency: '' });
+    this.setState({ habit: '', frequency: 0 });
   };
 
   render() {
@@ -36,10 +36,10 @@ class AddHabit extends React.Component {
             value={this.state.frequency}
           >
             <option>Select frequency</option>
-            <option value='10 times a day'>10 times a day</option>
-            <option value='5 times a day'>5 times a day</option>
-            <option value='Twice Daily'>Twice Daily</option>
-            <option value='Daily'>Daily</option>
+            <option value={10}>10 times a day</option>
+            <option value={5}>5 times a day</option>
+            <option value={2}>Twice Daily</option>
+            <option value={1}>Daily</option>
           </select>
         </label>
         <button type='submit' onClick={this.handleSubmit}>
