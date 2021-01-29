@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: "Dancing Script", cursive;
 }
 
 .App-header {
@@ -11,4 +12,27 @@
   justify-content: top;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+li {
+  border-style: solid;
+  padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: url(https://cur.cursors-4u.net/nature/nat-10/nat927.ani),
+    url(https://cur.cursors-4u.net/nature/nat-10/nat927.png), auto !important;
+  background-color: #570707;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 50%;
 }
